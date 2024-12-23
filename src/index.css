@@ -59,6 +59,16 @@ html {
   font-size: 90%;
 }
 
+::-webkit-scrollbar{
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb{
+  @apply bg-secondary;
+  width: 6px;
+  border-radius: 6px;
+}
+
 /* landing page banner video */
 .banner video {
   object-fit: cover;
