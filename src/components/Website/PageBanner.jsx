@@ -11,7 +11,7 @@ const PageBanner = ({ title, banner, position, description }) => {
   }
   return (
     <div
-      className="h-fit min-h-[60vh] w-full page-banner text-white pt-[15rem] pb-[10rem] bg-cover bg-center relative"
+      className="h-fit w-full page-banner text-white pt-[15rem] pb-[10rem] bg-cover bg-center relative"
       style={{ backgroundImage: `url(${banner})` }}
     >
       <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10"></div>

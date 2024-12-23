@@ -17,7 +17,19 @@ const BlogsDetail = () => {
   return (
     <>
       <Header />
-      <PageBanner title=" " banner={blog.image} />
+      <div
+        className="h-fit min-h-[55vh] w-full page-banner text-white pt-[15rem] pb-[10rem] bg-cover bg-center relative"
+        style={{ backgroundImage: `url(${blog.image})` }}
+      >
+        <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10"></div>
+        {/* <div
+          className={`wrapper relative z-10 w-full flex flex-col gap-3 px-3 sm:px-8`}
+        >
+          <h1 data-aos="fade-up" className="heading text-start max-w-3xl">
+            {blog.title}
+          </h1>
+        </div> */}
+      </div>
       <div className="py-[5rem] wrapper">
         <div dangerouslySetInnerHTML={{ __html: blog.contentHtml }}></div>
       </div>
