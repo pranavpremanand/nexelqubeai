@@ -64,6 +64,7 @@ const Banner = ({ page }) => {
         playsinline
         onReady={() => setVideoLoaded(true)}
         pip={false}
+        playbackRate={0.4}
         config={{
           file: {
             attributes: {

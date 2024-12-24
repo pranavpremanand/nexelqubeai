@@ -50,6 +50,7 @@ const Banner = () => {
         height="100%"
         playsinline
         pip={false}
+        playbackRate={0.4}
         config={{
           file: {
             attributes: {
