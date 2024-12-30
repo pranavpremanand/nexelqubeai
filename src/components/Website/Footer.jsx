@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaLinkedinIn } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { GrFacebookOption } from "react-icons/gr";
-import { allServices, logo } from "../../constants";
+import { allServices, clientDetails, logo } from "../../constants";
 
 const Footer = () => {
   return (
@@ -34,12 +34,26 @@ const Footer = () => {
               <GrFacebookOption className="text-2xl" />
             </Link>
           </div>
+
+          <div className="space-y-2 flex flex-col mt-5">
+            <Link to={`mailto:${clientDetails.email}`} className="">
+              {clientDetails.email}
+            </Link>
+            <Link to={`tel:${clientDetails.phone}`} className="">
+              +{clientDetails.phone}
+            </Link>
+            <p className="">{clientDetails.address}</p>
+          </div>
         </div>
         <div className="flex flex-col mt-6 sm:mt-0 sm:flex-row gap-7 md:gap-14">
           <div className="flex flex-col gap-3">
             <p className="text-lg font-semibold">Our Services</p>
             {allServices.map((item) => (
-              <Link key={item.id} to={`/services/${item.title}`} className="cursor-pointer">
+              <Link
+                key={item.id}
+                to={`/services/${item.title}`}
+                className="cursor-pointer"
+              >
                 {item.title}
               </Link>
             ))}

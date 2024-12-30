@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaLinkedinIn } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { GrFacebookOption } from "react-icons/gr";
-import { logo } from "../../constants";
+import { clientDetails, logo } from "../../constants";
 
 const Footer = () => {
   return (
@@ -18,6 +18,11 @@ const Footer = () => {
             height="100"
             className="h-[4.5rem] object-contain"
           />
+          <div className="space-y-2 flex flex-col mt-5">
+            <Link to={`mailto:${clientDetails.email}`} className="">{clientDetails.email}</Link>
+            <Link to={`tel:${clientDetails.phone}`} className="">+{clientDetails.phone}</Link>
+            <p className="">{clientDetails.address}</p>
+          </div>
         </div>
         <div className="">
           <div className="flex mt-3 gap-5 justify-start">
