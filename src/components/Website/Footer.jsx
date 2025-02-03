@@ -40,7 +40,7 @@ const Footer = () => {
               {clientDetails.email}
             </Link>
             <Link to={`tel:${clientDetails.phone}`} className="">
-              +{clientDetails.phone}
+              {clientDetails.phone}
             </Link>
             <p className="">{clientDetails.address}</p>
           </div>

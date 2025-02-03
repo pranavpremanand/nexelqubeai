@@ -154,7 +154,7 @@ const Home = () => {
               src={founderImg}
               loading="lazy"
               alt="ceo"
-              className="h-full w-fit md:w-full rounded-ss-3xl rounded-ee-3xl max-h-[20rem] object-contain border"
+              className="h-full w-fit md:w-full rounded-ss-3xl rounded-ee-3xl max-h-[20rem] object-cover border"
             />
           </div>
           <h3 className="heading self-start block md:hidden">Our Founder's Message</h3>

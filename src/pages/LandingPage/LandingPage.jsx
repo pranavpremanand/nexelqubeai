@@ -9,6 +9,8 @@ import CallToAction from "../../components/CallToAction";
 import Form from "../../components/Form";
 import webImg from "../../assets/landingpage-services-imgs/web-development.webp";
 import appImg from "../../assets/landingpage-services-imgs/app-development.webp";
+import ceoImg from "../../assets/ceo.jpg";
+import founderImg from "../../assets/founder.jpg";
 
 const GetInTouch = lazy(() => import("../../components/GetInTouch"));
 const Testimonials = lazy(() => import("../../components/Testimonials"));
@@ -62,37 +64,6 @@ const LandingPage = ({ page }) => {
           </div>
         </div>
       </div>
-      {/* <GetInTouch /> */}
-      {/* <section id="about-us" className="relative py-[3rem]">
-        <div className="blurred-red-circle h-[25rem] w-[25rem] top-[-10rem] left-[-10rem] -z-10"></div>
-        <div className="wrapper">
-          <h1
-            data-aos="fade-down"
-            className="heading text-center mb-5 md:mb-10"
-          >
-            About Us
-          </h1>
-          <div className="grid md:grid-cols-2 gap-5 md:gap-10">
-            <p data-aos="fade-right" className="description">
-              At NexelQubeAI, we believe that technology should be the driving
-              force behind your business's growth and success. Headquartered in
-              the tech capital of India, Bengaluru, we are a team of passionate
-              innovators and technology enthusiasts committed to delivering
-              cutting-edge, future-ready solutions. Our mission is to empower
-              businesses to navigate the complexities of the digital era with
-              confidence, ensuring they remain competitive and agile in a
-              fast-evolving marketplace.
-            </p>
-            <img
-              data-aos="fade-left"
-              loading="lazy"
-              src={aboutImg}
-              alt="about"
-              className="max-h-[25rem] w-full object-cover"
-            />
-          </div>
-        </div>
-      </section> */}
       <TrustWorthySection />
       <section
         id="services"
@@ -154,6 +125,57 @@ const LandingPage = ({ page }) => {
       <CallToAction />
       <Portfolio page={page} />
       <Testimonials />
+      <section className="wrapper space-y-8 py-[2rem]">
+        <div data-aos="fade-up" className="rounded-ss-3xl border rounded-ee-3xl max-w-7xl mx-auto grid md:grid-cols-[15%_auto] items-center gap-7 p-4">
+          <h3 className="heading block md:hidden">Our CEO's Message</h3>
+          <div className="md:aspect-[3/4] w-full overflow-hidden flex flex-col">
+            <img
+              src={ceoImg}
+              loading="lazy"
+              alt="ceo"
+              className="h-full w-fit md:w-full rounded-ss-3xl rounded-ee-3xl max-h-[20rem] object-contain"
+            />
+          </div>
+          <div className="flex flex-col gap-5">
+            <h3 className="heading md:block hidden">Our CEO's Message</h3>
+            <p className="description">
+              At NexelQubeAI, we leverage the power of AI to create
+              transformative digital experiences that elevate businesses. Our
+              commitment to innovation drives us to develop intelligent
+              solutions that enhance efficiency and foster growth. Together, we
+              can turn your ideas into reality and shape a smarter future.
+            </p>
+            <p className="description !font-semibold text-start">- Prasanth, Nexelqube AI</p>
+          </div>
+        </div>
+        <div data-aos="fade-up" className="px-4 rounded-tr-3xl border rounded-bl-3xl max-w-7xl mx-auto flex flex-col-reverse md:grid grid-cols-[auto_15%] items-center gap-7 p-4">
+          <div className="flex flex-col gap-5">
+            <h3 className="heading md:block hidden">Our Founder's Message</h3>
+            <p className="description">
+              At Nexelqube AI, we're redefining the future with intelligent,
+              cutting-edge solutions. Our mission is to empower businesses with
+              AI-driven innovations that enhance efficiency, creativity, and
+              growth. we craft intelligent solutions that push boundaries and
+              unlock new possibilities. Our vision is to merge innovation with
+              impact, transforming the way businesses thrive in an AI-driven
+              world. Join us as we shape the next era of intelligent technology.
+              The future is now—let’s build it together.
+            </p>
+            <p className="description !font-semibold md:text-end">
+              - S.Keerthi Bai, Nexelqube AI
+            </p>
+          </div>
+          <div className="md:aspect-[3/4] w-full overflow-hidden flex flex-col">
+            <img
+              src={founderImg}
+              loading="lazy"
+              alt="ceo"
+              className="h-full w-fit md:w-full rounded-ss-3xl rounded-ee-3xl max-h-[20rem] object-cover border"
+            />
+          </div>
+          <h3 className="heading self-start block md:hidden">Our Founder's Message</h3>
+        </div>
+      </section>
       <BrandLogos />
       <GetInTouch />
       <Footer />
