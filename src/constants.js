@@ -29,7 +29,7 @@ export { logo };
 
 // client details
 export const clientDetails = {
-  phone: "917893977920",
+  phone: "+917680977025",
   email: "info@nexelqubeai.com",
   address: "Time Square, Thubarahalli, Bangalore, India – 560066",
 };
