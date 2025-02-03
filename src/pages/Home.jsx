@@ -4,6 +4,7 @@ import Footer from "../components/Website/Footer";
 import aboutImg from "../assets/aboutus-3.webp";
 import aboutImg2 from "../assets/why-ai-matters.webp";
 import ceoImg from "../assets/ceo.jpg";
+import founderImg from "../assets/founder.jpg";
 import BrandLogos from "../components/BrandLogos";
 import Portfolio from "../components/Portfolio";
 import Testimonials from "../components/Testimonials";
@@ -108,8 +109,9 @@ const Home = () => {
       <CallToAction />
       <Portfolio />
       <Testimonials />
-      <section className="wrapper">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-[15%_auto] items-center gap-7 pt-[5rem] pb-[3rem]">
+      <section className="wrapper space-y-8 py-[2rem]">
+        <div data-aos="fade-up" className="rounded-ss-3xl border rounded-ee-3xl max-w-7xl mx-auto grid md:grid-cols-[15%_auto] items-center gap-7 p-4">
+          <h3 className="heading block md:hidden">Our CEO's Message</h3>
           <div className="md:aspect-[3/4] w-full overflow-hidden flex flex-col">
             <img
               src={ceoImg}
@@ -119,7 +121,7 @@ const Home = () => {
             />
           </div>
           <div className="flex flex-col gap-5">
-            <h3 className="heading">Our CEO Message</h3>
+            <h3 className="heading md:block hidden">Our CEO's Message</h3>
             <p className="description">
               At NexelQubeAI, we leverage the power of AI to create
               transformative digital experiences that elevate businesses. Our
@@ -127,7 +129,35 @@ const Home = () => {
               solutions that enhance efficiency and foster growth. Together, we
               can turn your ideas into reality and shape a smarter future.
             </p>
+            <p className="description !font-semibold text-start">- Prasanth, Nexelqube AI</p>
           </div>
+        </div>
+        <div data-aos="fade-up" className="px-4 rounded-tr-3xl border rounded-bl-3xl max-w-7xl mx-auto flex flex-col-reverse md:grid grid-cols-[auto_15%] items-center gap-7 p-4">
+          <div className="flex flex-col gap-5">
+            <h3 className="heading md:block hidden">Our Founder's Message</h3>
+            <p className="description">
+              At Nexelqube AI, we're redefining the future with intelligent,
+              cutting-edge solutions. Our mission is to empower businesses with
+              AI-driven innovations that enhance efficiency, creativity, and
+              growth. we craft intelligent solutions that push boundaries and
+              unlock new possibilities. Our vision is to merge innovation with
+              impact, transforming the way businesses thrive in an AI-driven
+              world. Join us as we shape the next era of intelligent technology.
+              The future is now—let’s build it together.
+            </p>
+            <p className="description !font-semibold md:text-end">
+              - S.Keerthi Bai, Nexelqube AI
+            </p>
+          </div>
+          <div className="md:aspect-[3/4] w-full overflow-hidden flex flex-col">
+            <img
+              src={founderImg}
+              loading="lazy"
+              alt="ceo"
+              className="h-full w-fit md:w-full rounded-ss-3xl rounded-ee-3xl max-h-[20rem] object-contain border"
+            />
+          </div>
+          <h3 className="heading self-start block md:hidden">Our Founder's Message</h3>
         </div>
       </section>
       <BrandLogos />

@@ -525,16 +525,11 @@ export const appPortfolio = [
   {
     id: 3,
     img: require("./assets/app_projects/3.webp"),
-    title: "Glowsy",
+    title: "Artisan Express",
   },
   {
     id: 4,
     img: require("./assets/app_projects/4.webp"),
-    title: "Artisan Express",
-  },
-  {
-    id: 5,
-    img: require("./assets/app_projects/5.webp"),
     title: "House of Deliverance",
   },
 ];

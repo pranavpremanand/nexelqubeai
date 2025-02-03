@@ -1,6 +1,3 @@
-// import { allServices } from "../constants";
-// import { BiCaretRight } from "react-icons/bi";
-
 import { useContext } from "react";
 import { SpinnerContext } from "./SpinnerContext";
 import { useNavigate } from "react-router-dom";
@@ -26,26 +23,6 @@ const Form = () => {
       message: "",
     },
   });
-  //   const [dropdownOpen, setDropdownOpen] = useState(false);
-  //   const [selectedService, setSelectedService] = useState(allServices[0].title);
-  //   const dropdownRef = useRef(null);
-
-  //   useEffect(() => {
-  //     // Handler for clicking outside of the dropdown
-  //     const handleClickOutside = (event) => {
-  //       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-  //         setDropdownOpen(false); // Close the dropdown
-  //       }
-  //     };
-
-  //     // Add event listener
-  //     document.addEventListener("mousedown", handleClickOutside);
-
-  //     // Cleanup event listener on component unmount
-  //     return () => {
-  //       document.removeEventListener("mousedown", handleClickOutside);
-  //     };
-  //   }, []);
 
   // handle form submit click
   const handleFormSubmit = async (values) => {
@@ -77,7 +54,7 @@ const Form = () => {
         } else {
           toast.success("Email sent successfully");
           reset();
-        //   navigate("/thank-you");
+          //   navigate("/thank-you");
         }
       })
       .catch((error) => {
