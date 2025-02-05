@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { clientDetails } from "../constants";
+import axios from "axios";
 
 const Form = () => {
   const { setSpinner } = useContext(SpinnerContext);
@@ -37,30 +38,27 @@ const Form = () => {
     var payload = {
       to: clientDetails.email,
       subject: values.subject,
+      name: "NexelQubeAI",
       body: emailBody,
     };
 
-    await fetch("https://smtp-api-tawny.vercel.app/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
-      .then((response) => response.json())
-      .then((res) => {
-        if (res.error) {
-          toast.error(res.error);
-        } else {
-          toast.success("Email sent successfully");
-          reset();
-          //   navigate("/thank-you");
-        }
-      })
-      .catch((error) => {
-        toast.error(error.message);
-      })
-      .finally(() => setSpinner(false));
+    try {
+      const res = await axios.post(
+        "https://send-mail-redirect-boostmysites.vercel.app/send-email",
+        payload
+      );
+      if (res.data.success) {
+        toast.success("Email sent successfully");
+        reset();
+        navigate("/thank-you");
+      } else {
+        toast.error(res.data.message);
+      }
+    } catch (err) {
+      toast.error(err.message);
+    } finally {
+      setSpinner(false);
+    }
   };
   return (
     <div data-aos="fade-left" className="flex flex-col items-start gap-3 group">
@@ -89,7 +87,7 @@ const Form = () => {
                   },
                 })}
               />
-              <p className="text-red-900">{errors.name?.message}</p>
+              <small className="text-red-900">{errors.name?.message}</small>
             </div>
             <div className="">
               <input
@@ -106,7 +104,7 @@ const Form = () => {
                   },
                 })}
               />
-              <p className="text-red-900">{errors.email?.message}</p>
+              <small className="text-red-900">{errors.email?.message}</small>
             </div>
           </div>
           <div className="grid sm:grid-cols-2 gap-3">
@@ -128,7 +126,7 @@ const Form = () => {
                   },
                 })}
               />
-              <p className="text-red-900">{errors.subject?.message}</p>
+              <small className="text-red-900">{errors.subject?.message}</small>
             </div>
             <div className="">
               <input
@@ -144,7 +142,7 @@ const Form = () => {
                   },
                 })}
               />
-              <p className="text-red-900">{errors.phone?.message}</p>
+              <small className="text-red-900">{errors.phone?.message}</small>
             </div>
           </div>
           {/* <div className="flex flex-col relative" ref={dropdownRef}>
@@ -201,7 +199,7 @@ const Form = () => {
                 },
               })}
             />
-            <p className="text-red-900">{errors.message?.message}</p>
+            <small className="text-red-900">{errors.message?.message}</small>
           </div>
           <button
             disabled={isSubmitting}

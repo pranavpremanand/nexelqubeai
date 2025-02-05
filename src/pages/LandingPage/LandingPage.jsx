@@ -126,7 +126,10 @@ const LandingPage = ({ page }) => {
       <Portfolio page={page} />
       <Testimonials />
       <section className="wrapper space-y-8 py-[2rem]">
-        <div data-aos="fade-up" className="rounded-ss-3xl border rounded-ee-3xl max-w-7xl mx-auto grid md:grid-cols-[15%_auto] items-center gap-7 p-4">
+        <div
+          data-aos="fade-up"
+          className="rounded-ss-3xl border rounded-ee-3xl max-w-7xl mx-auto grid md:grid-cols-[15%_auto] items-center gap-7 p-4"
+        >
           <h3 className="heading block md:hidden">Our CEO's Message</h3>
           <div className="md:aspect-[3/4] w-full overflow-hidden flex flex-col">
             <img
@@ -145,10 +148,15 @@ const LandingPage = ({ page }) => {
               solutions that enhance efficiency and foster growth. Together, we
               can turn your ideas into reality and shape a smarter future.
             </p>
-            <p className="description !font-semibold text-start">- Prasanth, Nexelqube AI</p>
+            <p className="description !font-semibold text-start">
+              - Prasanth, Nexelqube AI
+            </p>
           </div>
         </div>
-        <div data-aos="fade-up" className="px-4 rounded-tr-3xl border rounded-bl-3xl max-w-7xl mx-auto flex flex-col-reverse md:grid grid-cols-[auto_15%] items-center gap-7 p-4">
+        <div
+          data-aos="fade-up"
+          className="px-4 rounded-tr-3xl border rounded-bl-3xl max-w-7xl mx-auto flex flex-col-reverse md:grid grid-cols-[auto_15%] items-center gap-7 p-4"
+        >
           <div className="flex flex-col gap-5">
             <h3 className="heading md:block hidden">Our Founder's Message</h3>
             <p className="description">
@@ -170,10 +178,12 @@ const LandingPage = ({ page }) => {
               src={founderImg}
               loading="lazy"
               alt="ceo"
-              className="h-full w-fit md:w-full rounded-ss-3xl rounded-ee-3xl max-h-[20rem] object-cover border"
+              className="h-full w-fit md:w-full rounded-tr-3xl rounded-bl-3xl max-h-[20rem] object-cover border"
             />
           </div>
-          <h3 className="heading self-start block md:hidden">Our Founder's Message</h3>
+          <h3 className="heading self-start block md:hidden">
+            Our Founder's Message
+          </h3>
         </div>
       </section>
       <BrandLogos />

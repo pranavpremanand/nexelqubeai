@@ -5,6 +5,7 @@ import { SpinnerContext } from "./SpinnerContext";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 const GetInTouch = () => {
   return (
@@ -82,30 +83,27 @@ export const InquiryForm = () => {
     var payload = {
       to: clientDetails.email,
       subject: values.subject,
+      name: "NexelQubeAI",
       body: emailBody,
     };
 
-    await fetch("https://smtp-api-tawny.vercel.app/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
-      .then((response) => response.json())
-      .then((res) => {
-        if (res.error) {
-          toast.error(res.error);
-        } else {
-          toast.success("Email sent successfully");
-          reset();
-          // navigate("/thank-you");
-        }
-      })
-      .catch((error) => {
-        toast.error(error.message);
-      })
-      .finally(() => setSpinner(false));
+    try {
+      const res = await axios.post(
+        "https://send-mail-redirect-boostmysites.vercel.app/send-email",
+        payload
+      );
+      if (res.data.success) {
+        toast.success("Email sent successfully");
+        reset();
+        navigate("/thank-you");
+      } else {
+        toast.error(res.data.message);
+      }
+    } catch (err) {
+      toast.error(err.message);
+    } finally {
+      setSpinner(false);
+    }
   };
   return (
     <div data-aos="fade-left" className="flex flex-col items-start gap-3 group">
@@ -137,7 +135,7 @@ export const InquiryForm = () => {
                   },
                 })}
               />
-              <p className="">{errors.name?.message}</p>
+              <small className="">{errors.name?.message}</small>
             </div>
             <div className="">
               <label className="text-white">Email</label>
@@ -154,7 +152,7 @@ export const InquiryForm = () => {
                   },
                 })}
               />
-              <p className="">{errors.email?.message}</p>
+              <small className="">{errors.email?.message}</small>
             </div>
           </div>
           <div className="grid lg:grid-cols-2 gap-3">
@@ -175,7 +173,7 @@ export const InquiryForm = () => {
                   },
                 })}
               />
-              <p className="">{errors.subject?.message}</p>
+              <small className="">{errors.subject?.message}</small>
             </div>
             <div className="">
               <label className="text-white">Phone Number</label>
@@ -192,7 +190,7 @@ export const InquiryForm = () => {
                   },
                 })}
               />
-              <p className="">{errors.phone?.message}</p>
+              <small className="">{errors.phone?.message}</small>
             </div>
           </div>
           <div className="flex flex-col relative" ref={dropdownRef}>
@@ -249,7 +247,7 @@ export const InquiryForm = () => {
                 },
               })}
             />
-            <p className="">{errors.message?.message}</p>
+            <small className="">{errors.message?.message}</small>
           </div>
           <button
             type="submit"

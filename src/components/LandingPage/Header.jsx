@@ -112,20 +112,6 @@ const Header = () => {
           </button>
         </div>
         <div className="py-4 px-7 flex flex-col gap-4">
-          {/* {landingPageHeaderLinks.map(({ id, link, title }) => (
-            <ScrollLink
-              onClick={() => setIsOpen(false)}
-              key={id}
-              className="text-2xl font-medium duration-300 link"
-              to={link}
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={1000}
-            >
-              {title}
-            </ScrollLink>
-          ))} */}
           <ScrollLink
             to="banner"
             onClick={() => setIsOpen(false)}

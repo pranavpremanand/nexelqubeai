@@ -57,7 +57,7 @@ const BrandLogos = () => {
       <div className="relative z-10">
         <div data-aos="fade-up" className="wrapper">
           <h2 className="heading max-w-[60rem] mx-auto text-center capitalize">
-            Join our <span className="text-primary">50+</span> happy clients
+            Join our <span className="text-primary">200+</span> happy clients
           </h2>
         </div>
         <div
