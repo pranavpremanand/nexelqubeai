@@ -107,59 +107,74 @@ const Home = () => {
 
       <IndustriesWeServe />
       <CallToAction />
-      <Portfolio />
-      <Testimonials />
-      <section className="wrapper space-y-8 py-[2rem]">
-        <div data-aos="fade-up" className="rounded-ss-3xl border rounded-ee-3xl max-w-7xl mx-auto grid md:grid-cols-[15%_auto] items-center gap-7 p-4">
-          <h3 className="heading block md:hidden">Our CEO's Message</h3>
-          <div className="md:aspect-[3/4] w-full overflow-hidden flex flex-col">
+      <section className="wrapper grid md:grid-cols-2 gap-6 py-[2rem]">
+        <div
+          data-aos="fade-up"
+          className="rounded-ss-3xl border rounded-ee-3xl max-w-7xl mx-auto grid lg:grid-cols-[30%_auto] gap-7 p-4"
+        >
+          <h3 className="text-2xl font-bold block lg:hidden">
+            Our CEO's Message
+          </h3>
+          <div className="h-[15rem] w-fit lg:aspect-[3/4] lg:h-full lg:w-full overflow-hidden flex flex-col rounded-ss-3xl rounded-ee-3xl">
             <img
               src={ceoImg}
               loading="lazy"
               alt="ceo"
-              className="h-full w-fit md:w-full rounded-ss-3xl rounded-ee-3xl max-h-[20rem] object-contain"
+              className="h-full w-fit lg:w-full object-cover"
             />
           </div>
           <div className="flex flex-col gap-5">
-            <h3 className="heading md:block hidden">Our CEO's Message</h3>
+            <h3 className="text-2xl font-bold lg:block hidden">
+              Our CEO's Message
+            </h3>
             <p className="description">
-              At NexelQubeAI, we leverage the power of AI to create
-              transformative digital experiences that elevate businesses. Our
-              commitment to innovation drives us to develop intelligent
-              solutions that enhance efficiency and foster growth. Together, we
-              can turn your ideas into reality and shape a smarter future.
+              We blend Innovation with Intelligence to engineer next-generation
+              digital solutions. Our expertise in AI-driven technology empowers
+              businesses to optimize operations, accelerate growth, and stay
+              ahead in a rapidly evolving world. With a vision for the future,
+              we turn possibilities into reality—driving transformation at every
+              step.
             </p>
-            <p className="description !font-semibold text-start">- Prasanth, Nexelqube AI</p>
+            <p className="description !font-semibold text-start">
+              - Prasanth, Nexelqube AI
+            </p>
           </div>
         </div>
-        <div data-aos="fade-up" className="px-4 rounded-tr-3xl border rounded-bl-3xl max-w-7xl mx-auto flex flex-col-reverse md:grid grid-cols-[auto_15%] items-center gap-7 p-4">
+        <div
+          data-aos="fade-up"
+          className="rounded-tr-3xl border rounded-bl-3xl max-w-7xl mx-auto flex flex-col-reverse lg:grid grid-cols-[auto_30%] gap-7 p-4"
+        >
           <div className="flex flex-col gap-5">
-            <h3 className="heading md:block hidden">Our Founder's Message</h3>
+            <h3 className="text-2xl font-bold lg:block hidden">
+              Our Founder's Message
+            </h3>
             <p className="description">
-              At Nexelqube AI, we're redefining the future with intelligent,
-              cutting-edge solutions. Our mission is to empower businesses with
-              AI-driven innovations that enhance efficiency, creativity, and
-              growth. we craft intelligent solutions that push boundaries and
-              unlock new possibilities. Our vision is to merge innovation with
-              impact, transforming the way businesses thrive in an AI-driven
-              world. Join us as we shape the next era of intelligent technology.
-              The future is now—let’s build it together.
+              At NexelQubeAI, we are not just building technology—we are
+              engineering possibilities. From ideation to execution, our focus
+              is on crafting intelligent, scalable, and future-ready solutions
+              that empower businesses to thrive in the digital era. Innovation
+              is at our core, and every challenge is an opportunity to push
+              boundaries and redefine what’s possible.
             </p>
-            <p className="description !font-semibold md:text-end">
+            <p className="description !font-semibold lg:text-end">
               - S.Keerthi Bai, Nexelqube AI
             </p>
           </div>
-          <div className="md:aspect-[3/4] w-full overflow-hidden flex flex-col">
+          <div className="h-[15rem] w-fit lg:aspect-[3/4] lg:h-full lg:w-full border overflow-hidden flex flex-col rounded-tr-3xl rounded-bl-3xl">
             <img
               src={founderImg}
               loading="lazy"
               alt="ceo"
-              className="h-full w-fit md:w-full rounded-tr-3xl rounded-bl-3xl max-h-[20rem] object-cover border"
+              className="h-full w-fit lg:w-full object-cover"
             />
           </div>
-          <h3 className="heading self-start block md:hidden">Our Founder's Message</h3>
+          <h3 className="text-2xl font-bold self-start block lg:hidden">
+            Our Founder's Message
+          </h3>
         </div>
       </section>
+      <Portfolio />
+      <Testimonials />
       <BrandLogos />
       <GetInTouch />
       <Footer />
