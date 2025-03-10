@@ -32,6 +32,9 @@ export const clientDetails = {
   phone: "+917680977025",
   email: "info@nexelqubeai.com",
   address: "Time Square, Thubarahalli, Bangalore, India – 560066",
+  instagram: "https://www.instagram.com/nexelqubeai/?next=%2F",
+  twitter: "https://x.com/NexelQubeAI",
+  linkedin: "https://www.linkedin.com/in/nexelqube-ai-a2b6a7324/",
 };
 
 // landing page header links

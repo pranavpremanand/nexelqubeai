@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
-import { GrFacebookOption } from "react-icons/gr";
 import { allServices, clientDetails, logo } from "../../constants";
 
 const Footer = () => {
@@ -24,14 +23,14 @@ const Footer = () => {
           </p>
 
           <div className="flex mt-3 gap-5 items-center">
-            <Link to="#">
+            <Link to={clientDetails.linkedin} target="_blank">
               <FaLinkedinIn className="text-2xl" />
             </Link>
-            <Link to="#">
+            <Link to={clientDetails.instagram} target="_blank">
               <AiFillInstagram className="text-2xl" />
             </Link>
-            <Link to="#">
-              <GrFacebookOption className="text-2xl" />
+            <Link to={clientDetails.twitter} target="_blank">
+              <FaTwitter className="text-2xl" />
             </Link>
           </div>
 
