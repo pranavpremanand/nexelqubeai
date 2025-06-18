@@ -107,55 +107,25 @@ const Home = () => {
 
       <IndustriesWeServe />
       <CallToAction />
-      <section className="wrapper grid md:grid-cols-2 gap-6 py-[2rem]">
-        <div
-          data-aos="fade-up"
-          className="rounded-ss-3xl border rounded-ee-3xl max-w-7xl mx-auto grid lg:grid-cols-[30%_auto] gap-7 p-4"
-        >
-          <h3 className="text-2xl font-bold block lg:hidden">
-            Our CEO's Message
-          </h3>
-          <div className="h-[15rem] w-fit lg:aspect-[3/4] lg:h-full lg:w-full overflow-hidden flex flex-col rounded-ss-3xl rounded-ee-3xl">
-            <img
-              src={ceoImg}
-              loading="lazy"
-              alt="ceo"
-              className="h-full w-fit lg:w-full object-cover"
-            />
-          </div>
-          <div className="flex flex-col gap-5">
-            <h3 className="text-2xl font-bold lg:block hidden">
-              Our CEO's Message
-            </h3>
-            <p className="description">
-              We blend Innovation with Intelligence to engineer next-generation
-              digital solutions. Our expertise in AI-driven technology empowers
-              businesses to optimize operations, accelerate growth, and stay
-              ahead in a rapidly evolving world. With a vision for the future,
-              we turn possibilities into reality—driving transformation at every
-              step.
-            </p>
-            <p className="description !font-semibold text-start">
-              - Prasanth, Nexelqube AI
-            </p>
-          </div>
-        </div>
+      <section className="wrapper grid md:grid-cols-1 gap-6 py-[2rem]">
         <div
           data-aos="fade-up"
           className="rounded-tr-3xl border rounded-bl-3xl max-w-7xl mx-auto flex flex-col-reverse lg:grid grid-cols-[auto_30%] gap-7 p-4"
         >
-          <div className="flex flex-col gap-5">
-            <h3 className="text-2xl font-bold lg:block hidden">
-              Our Founder's Message
-            </h3>
-            <p className="description">
-              At NexelQubeAI, we are not just building technology—we are
-              engineering possibilities. From ideation to execution, our focus
-              is on crafting intelligent, scalable, and future-ready solutions
-              that empower businesses to thrive in the digital era. Innovation
-              is at our core, and every challenge is an opportunity to push
-              boundaries and redefine what’s possible.
-            </p>
+          <div className="flex flex-col justify-between gap-5">
+            <div className="space-y-5">
+              <h3 className="text-2xl font-bold lg:block hidden">
+                Our Founder's Message
+              </h3>
+              <p className="description">
+                At NexelQubeAI, we are not just building technology—we are
+                engineering possibilities. From ideation to execution, our focus
+                is on crafting intelligent, scalable, and future-ready solutions
+                that empower businesses to thrive in the digital era. Innovation
+                is at our core, and every challenge is an opportunity to push
+                boundaries and redefine what’s possible.
+              </p>
+            </div>
             <p className="description !font-semibold lg:text-end">
               - S.Keerthi Bai, Nexelqube AI
             </p>
